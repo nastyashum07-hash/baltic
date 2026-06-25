@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Написать нам — Балтийский варяг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="header-left">
+            <button class="burger-menu" id="openMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="header-logo">Балтийский варяг</div>
+    </header>
+
+    <!-- МЕНЮ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-left">
+            <button class="menu-close" id="closeMenu">
+    <img src="krest.png" alt="Закрыть" style="height: 50px; width: auto; display: block;">
+</button>
+            <nav class="menu-nav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="contact.html">НАПИСАТЬ НАМ</a>
+                <a href="events.html">СОБЫТИЯ</a>
+                <a href="museum.html">МУЗЕЙ</a>
+                <a href="history.html">ИСТОРИИ ВОВ</a>
+            </nav>
+        </div>
+        <div class="menu-right">
+            <div class="header-logo">Балтийский варяг</div>
+            <a href="https://vk.ru/balticvaryag" target="_blank" style="background: #1a1a1a; display: inline-flex; padding: 5px; margin-bottom: 20px;">
+    <img src="vk.JPG" alt="VK" style="height: 40px; width: auto; display: block;">
+</a>
+            <div class="menu-contacts">
+                <p>Эл. почта: sd@balticvaryag.ru</p>
+                <p>Телефон: +7 921 967-70-91</p>
+                <a href="404.html" class="policy-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="section-dark" style="padding-top: 30px;">
+        
+        <!-- 1. Заголовок и описание -->
+        <div class="contact-header-text">
+            <h1 class="section-title" style="font-size: 48px; margin-bottom: 20px;">НАПИСАТЬ НАМ</h1>
+            <p style="font-size: 16px; color: #dddddd; max-width: 600px; line-height: 1.6; margin-bottom: 40px;">
+                Фонд «Балтийский варяг» собирает воспоминания о событиях на Балтике в 1941–1945 годах: 
+                о подводниках, моряках, их семьях и обо всём, что вы считаете важным сохранить. 
+                Самые интересные истории мы опубликуем на странице «Истории Балтики»
+            </p>
+        </div>
+
+        <!-- 2. Форма -->
+        <div class="contact-form-wrapper-new">
+            <form id="feedbackForm">
+                
+                <input type="text" placeholder="имя" class="form-input-new" required>
+                <input type="tel" placeholder="телефон" class="form-input-new" required>
+                <input type="email" placeholder="почта" class="form-input-new" required>
+                
+                <textarea placeholder="Ваше сообщение" class="form-textarea-new" required></textarea>
+                
+                <div class="captcha-box-new">
+                    <input type="checkbox" id="robotCheckNew">
+                    <label for="robotCheckNew">я не робот</label>
+                </div>
+
+                <button type="submit" class="btn-submit-form-new">отправить</button>
+                
+            </form>
+        </div>
+
+        <div class="director-wrapper-new">
+<div class="director-photo-new">
+<img src="dir.png" alt="Директор">
+</div>
+<div class="director-info-new">
+<p class="director-name">Директор благотворительного<br>Фонда «Балтийский варяг»</p>
+<p class="director-name" style="margin-top: 5px;">Даминцев<br>Сергей Валерьевич</p>
+<p style="margin-top: 15px; color: #dddddd;">Эл. почта: sd@balticvaryag.ru<br>
+Телефон: +7 921 967-70-91</p>
+</div>
+</div>
+
+    </main>
+
+    <!-- ПОДВАЛ (ФУТЕР) --><footer class="section-dark contact-section" style="padding-top: 30px;">
+        <div class="footer-grid">
+            <div class="footer-left">
+                <h2 class="contact-title">ПОДЕЛИТЕСЬ СВОЕЙ ИСТОРИЕЙ</h2>
+                <div class="contact-text">
+                    <p>Знаете что-то интересное о событиях 1941-1945? напишите нам!<br>
+                    Мы постоянно находимся в процессе поиска информации о родственниках подводников.</p>
+                </div>
+                <div class="footer-buttons">
+                    <a href="contact.html" class="btn-white">написать нам</a>
+                    <a href="https://vk.ru/balticvaryag" target="_blank" style="display: inline-block; margin-left: 10px;">
+        <img src="vk.JPG" alt="VK" style="height: 44px; width: auto; display: block;">
+    </a>
+</div>
+            </div>
+            <div class="footer-right">
+                <h2 class="contact-title">КОНТАКТЫ</h2>
+                <p class="contact-text">Эл. почта: <a href="mailto:sd@balticvaryag.ru">sd@balticvaryag.ru</a></p>
+                <p class="contact-text">Телефон: +7 921 967-70-91</p>
+                <a href="404.html" class="policy-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Меню
+        const menuOverlay = document.getElementById('menuOverlay');
+        const openBtn = document.getElementById('openMenu');
+        const closeBtn = document.getElementById('closeMenu');
+        openBtn.addEventListener('click', () => menuOverlay.classList.add('active'));
+        closeBtn.addEventListener('click', () => menuOverlay.classList.remove('active'));
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) menuOverlay.classList.remove('active');
+        });
+
+        // Обработка формы
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваше сообщение отправлено (демонстрация).');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
