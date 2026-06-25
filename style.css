@@ -1,0 +1,817 @@
+/* Сброс базовых стилей и общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Основной шрифт для текста */
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ffffff;
+    background-color: #1a1a1a; /* Темный фон для крайних случаев */
+}
+
+/* --- ХЕДЕР --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Бургер меню (три полоски) */
+.burger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0;
+}
+
+.burger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #ffffff;
+}
+
+/* Иконка сообщения */
+.header-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #ffffff;
+}
+
+.header-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+/* --- СЕКЦИИ --- */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Темная секция */
+.section-dark {
+    background-color: #1a1a1a;
+    padding: 30px 20px 50px;
+}
+
+/* Светлая секция */
+.section-light {
+    background-color: #cccccc;
+    padding: 40px 20px 60px;
+}
+
+/* --- КАРТОЧКИ ИСТОРИЙ (Секция 1) --- */
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10; /* Сохраняем пропорции картинки */
+    border: 1px solid #444;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #bbbbbb;
+    line-height: 1.3;
+}
+
+/* --- ПРОМО БЛОКИ (Секция 2) --- */
+.promo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.promo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.promo-img-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.promo-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.promo-desc {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Кнопки (Черная на светлом фоне) */
+.btn-black {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+.btn-black:hover {
+    background-color: #333;
+}
+
+/* --- СЕКЦИЯ КОНТАКТОВ --- */
+.contact-section {
+    padding-bottom: 60px;
+}
+
+.contact-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Выравнивание кнопки по низу текста */
+}
+
+.contact-text p {
+    font-size: 16px;
+    color: #cccccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Кнопка (Белая на темном фоне) */
+.btn-white {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    transition: all 0.3s;
+}
+.btn-white:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+/* --- АДАПТИВНОСТЬ (Мобильная версия) --- */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr; /* Одна колонка на мобильных */
+        gap: 30px;
+    }
+    
+    .promo-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .header-logo {
+        font-size: 18px;
+    }
+}
+/* --- Добавьте это в конец вашего style.css --- */
+
+/* Меню-оверлей (на весь экран) */
+.menu-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex;
+    background-color: transparent;
+    visibility: hidden; /* Скрыто по умолчанию */
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-left {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.menu-overlay.active .menu-left { transform: translateX(0); }
+
+.menu-close {
+    background: none; border: none; font-size: 40px; cursor: pointer;
+    color: #000; align-self: flex-start; margin-bottom: 40px;
+}
+.menu-nav a {
+    display: block; font-family: 'Oswald', sans-serif;
+    font-size: 32px; color: #000; text-decoration: none;
+    text-transform: uppercase; margin-bottom: 15px;
+    transition: opacity 0.2s;
+}
+.menu-nav a:hover { opacity: 0.7; }
+
+.menu-right {
+    width: 70%;
+    background-color: #1a1a1a;
+    padding: 30px 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.menu-right .header-logo { color: #fff; margin-bottom: 20px; }
+.menu-contacts {
+    margin-top: auto; color: #fff;
+    text-align: right; line-height: 1.8; font-size: 14px;
+}
+.menu-contacts a.policy-link { color: #fff; text-decoration: none; }
+
+/* Иконка VK */
+.vk-icon-box {
+    background: #fff; display: inline-flex; justify-content: center;
+    align-items: center; width: 50px; height: 50px; align-self: flex-start;
+}
+.vk-icon-box-small {
+    background: #fff; display: inline-flex; justify-content: center;
+    align-items: center; width: 44px; height: 44px; margin-left: 10px;
+}
+
+/* Кнопка "К историям" (с рамкой) */
+.btn-outline {
+    display: inline-block; margin-top: 20px;
+    padding: 10px 20px; border: 1px solid #fff; color: #fff;
+    text-decoration: none; font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; transition: 0.3s;
+}
+.btn-outline:hover { background: #fff; color: #1a1a1a; }
+
+/* Футер (Секция контактов) */
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; }
+.footer-buttons { display: flex; align-items: center; margin-top: 10px; }
+.footer-right { text-align: right; }
+.footer-right .policy-link { color: #fff; text-decoration: underline; }
+.contact-title { font-family: 'Oswald', sans-serif; font-size: 26px; margin-bottom: 15px; }
+.contact-text { font-size: 14px; color: #ccc; line-height: 1.6; margin-bottom: 10px; }
+.contact-text a { color: #fff; text-decoration: underline; }
+
+/* Адаптив для футера и меню */
+@media (max-width: 768px) {
+    .menu-left { width: 100%; }
+    .menu-right { display: none; }
+    .footer-grid { flex-direction: column; }
+    .footer-right { text-align: left; }
+}
+/* --- Стили для страницы Экспонаты --- */
+
+.museum-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 20px;
+}
+
+.museum-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.museum-img-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid #444;
+    margin-bottom: 15px;
+}
+
+.museum-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.museum-desc {
+    font-size: 14px;
+    color: #dddddd;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .museum-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .museum-grid {
+        grid-template-columns: 1fr; /* 1 колонка на телефонах */
+    }
+}
+/* --- Стили для Событий --- */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.event-card {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    border-color: #777;
+}
+
+.event-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+}
+
+.event-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 20px;
+}
+
+.event-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.event-desc {
+    font-size: 14px;
+    color: #cccccc;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Стили для страницы "Написать нам" --- */
+.contact-header-light {
+    background-color: #cccccc;
+    padding: 40px 20px;
+    color: #1a1a1a;
+}
+.contact-form-section {
+    background-color: #1a1a1a;
+    padding: 40px 20px;
+}
+.contact-form-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+#feedbackForm {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.form-left-col {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-right-col {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.form-input {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 14px;
+    outline: none;
+}
+.form-input::placeholder { color: #888; }
+.form-input:focus { border-color: #fff; }
+
+.form-textarea {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 14px;
+    height: 100%;
+    min-height: 150px;
+    resize: vertical;
+    outline: none;
+    font-family: inherit;
+}
+.form-textarea::placeholder { color: #888; }
+.form-textarea:focus { border-color: #fff; }
+
+.form-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.file-upload-btn {
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    border: 1px solid #555;
+    padding: 8px 12px;
+}
+.file-upload-btn i { font-size: 22px; }
+.captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.captcha-box input[type="checkbox"] {
+    width: 18px; height: 18px;
+    cursor: pointer;
+}
+
+.form-right-bottom {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-submit-form {
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 10px 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit-form:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+.contact-footer-light {
+    background-color: #cccccc;
+    padding: 40px 20px;
+}
+.director-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+}
+.director-info {
+    color: #1a1a1a;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.director-photo img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+/* --- Стили для страницы "Истории" --- */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.history-item {
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+.history-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.history-img-wrapper {
+width: 100%;
+aspect-ratio: 16 / 6; /* <--- Стало так (почти в 2 раза ниже) */
+overflow: hidden;
+margin-bottom: 15px;
+}
+.history-img-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+.history-item-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.btn-small {
+    font-size: 14px;
+    padding: 6px 15px;
+    margin-top: 0;
+}
+
+/* Адаптив для форм и контактов */
+@media (max-width: 768px) {
+    #feedbackForm { flex-direction: column; }
+    .director-wrapper { flex-direction: column-reverse; align-items: flex-start; }
+    .director-photo img { max-width: 150px; }
+}
+/* --- Стили для статьи/лонгрида --- */
+.submarine-article {
+    max-width: 900px; /* Ограничиваем ширину текста, чтобы было удобно читать */
+    margin: 0 auto;
+}
+.submarine-main-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.submarine-img-block {
+    margin-bottom: 25px;
+}
+.submarine-img-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #444;
+}
+.img-caption {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 5px;
+    font-style: italic;
+}
+.submarine-text-block {
+    margin-bottom: 35px;
+}
+.submarine-text-block p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+/* --- Стили для обновленной страницы "Написать нам" (Темная тема) --- */
+
+.contact-header-text {
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.contact-form-wrapper-new {
+    max-width: 600px; /* Форма уже, чем в старом варианте */
+    margin-bottom: 60px;
+}
+
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input-new {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+}
+.form-input-new::placeholder { color: #888; }
+.form-input-new:focus { border-color: #fff; }
+
+.form-textarea-new {
+    width: 100%;
+    min-height: 140px;
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 12px 15px;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+    font-family: inherit;
+}
+.form-textarea-new::placeholder { color: #888; }
+.form-textarea-new:focus { border-color: #fff; }
+
+.captcha-box-new {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.captcha-box-new input[type="checkbox"] {
+    width: 18px; height: 18px;
+    cursor: pointer;
+}
+
+.btn-submit-form-new {
+    width: 100%;
+    max-width: 180px;
+    background: transparent;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+.btn-submit-form-new:hover {
+    border-color: #fff;
+    background: #fff;
+    color: #1a1a1a;
+}
+
+/* Блок директора */
+.director-wrapper-new {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.director-photo-new img {
+    width: 380px;
+    height: auto;
+    border-radius: 4px; /* Легкое скругление, если нужно */
+    display: block;
+}
+.director-info-new {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+@media (max-width: 480px) {
+    .director-wrapper-new {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .btn-submit-form-new {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+/* --- Дополнение к блоку директора на странице контактов --- */
+
+.director-info-new {
+max-width: 320px; /* Это заставит текст переноситься так, как вам нужно */
+}
+
+.director-name {
+font-size: 15px;
+line-height: 1.5;
+color: #ffffff;
+font-weight: 400; /* Убирает жирность */
+margin: 0;
+}
+/* Кнопка для 404 */
+.back-btn-404 {
+display: inline-block;
+padding: 12px 35px;
+border: 2px solid #e6e6e6;
+color: #e6e6e6;
+text-decoration: none;
+font-family: 'Oswald', sans-serif;
+font-size: 22px;
+text-transform: uppercase;
+background: transparent;
+transition: all 0.3s;
+}
+.back-btn-404:hover {
+background: #e6e6e6;
+color: #1a1a1a;
+}
+/* --- УТОНЧАЕМ ЗАГОЛОВКИ СТРАНИЦ --- */
+
+/* Применяем к заголовкам: Написать нам, События, Экспонаты, Истории */
+.section-title {
+    font-weight: 400; /* 1. Убираем "жирность" шрифта (400 = обычный) */
+    letter-spacing: 1.5px; /* 2. Добавляем небольшой разрядку между буквами */
+    opacity: 0.9; /* 3. Слегка (на 10%) осветляем/делаем прозрачнее черный цвет */
+}
+
+/* Дополнительно для "Истории 1941-1945", если там заголовок другого класса */
+.submarine-main-title,
+.h1, h1 {
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}

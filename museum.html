@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экспонаты — Балтийский варяг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ХЕДЕР -->
+    <header class="header">
+        <div class="header-left">
+            <button class="burger-menu" id="openMenu">
+                <span></span><span></span><span></span>
+            </button>
+        
+        </div>
+        <div class="header-logo">Балтийский варяг</div>
+    </header>
+
+    <!-- МЕНЮ (ОВЕРЛЕЙ) -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-left">
+            <button class="menu-close" id="closeMenu">
+    <img src="krest.png" alt="Закрыть" style="height: 50px; width: auto; display: block;">
+</button>
+            <nav class="menu-nav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="contact.html">НАПИСАТЬ НАМ</a>
+                <a href="events.html">СОБЫТИЯ</a>
+                <a href="museum.html">МУЗЕЙ</a>
+                <a href="history.html">ИСТОРИИ 1941-1945</a>
+                
+            </nav>
+        </div>
+        <div class="menu-right">
+            <div class="header-logo">Балтийский варяг</div>
+            <a href="https://vk.ru/balticvaryag" target="_blank" style="background: #1a1a1a; display: inline-flex; padding: 5px; margin-bottom: 20px;">
+    <img src="vk.JPG" alt="VK" style="height: 40px; width: auto; display: block;">
+</a>
+            <div class="menu-contacts">
+                <p>Эл. почта: sd@balticvaryag.ru</p>
+                <p>Телефон: +7 921 967-70-91</p>
+                <a href="404.html" class="policy-link">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ ЭКСПОНАТОВ -->
+    <main>
+        <section class="section-dark" style="padding-bottom: 20px;">
+            <h1 class="section-title" style="font-size: 48px; margin-bottom: 30px;">ЭКСПОНАТЫ</h1>
+            
+            <!-- Сетка 3x3 -->
+            <div class="museum-grid">
+                <!-- Карточка 1 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="pelen.png" alt="Пеленгатор"></div>
+                    <p class="museum-desc">Пеленгатор оптический (прибор для определения положения судна в море). Входил в состав штурманского вооружения подводок с 1930-х гг.</p>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="nau.png" alt="Наушники"></div>
+                    <p class="museum-desc">Наушники военного радиста. 1940-е гг.</p>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="helmet.png" alt="Ремень и кобура"></div>
+                    <p class="museum-desc">Ремень офицерский и кобура для пистолета ТТ. 1943 г.</p>
+                </div>
+                <!-- Карточка 4 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="lo.png" alt="Ложка и кружка"></div>
+                    <p class="museum-desc">Ложка армейская алюминиевая. Самодельная надпись на ручке: «За Родину! За Сталина!» 1940-е гг. Кружка армейская. 1940-е гг.</p>
+                </div>
+                <!-- Карточка 5 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="bly.png" alt="Ремень матросский"></div>
+                    <p class="museum-desc">Ремень матросский. 1940-е гг.</p>
+                </div><!-- Карточка 6 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="krenn.png" alt="Кренометр"></div>
+                    <p class="museum-desc">Кренометр (прибор для измерения крена судна). 1940-е гг.</p>
+                </div>
+                <!-- Карточка 7 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="pog.png" alt="Погоны"></div>
+                    <p class="museum-desc">Погоны капитан-лейтенанта РК ВМФ образца 1943 г.</p>
+                </div>
+                <!-- Карточка 8 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="fur.png" alt="Фуражка"></div>
+                    <p class="museum-desc">Фуражка офицера РК ВМФ. 1940-е гг.</p>
+                </div>
+                <!-- Карточка 9 -->
+                <div class="museum-card">
+                    <div class="museum-img-wrapper"><img src="koz.png" alt="Бескозырка"></div>
+                    <p class="museum-desc">Бескозырка матросская образца 1940-х гг.</p>
+                </div>
+            </div>
+
+            <!-- Кнопка перехода -->
+            <div style="margin-top: 40px;">
+                <a href="history.html" class="btn-outline">ИСТОРИИ 1941-1945</a>
+            </div>
+        </section>
+
+        <!-- ПОДВАЛ (ФУТЕР) -->
+        <footer class="section-dark contact-section">
+            <div class="footer-grid">
+                <div class="footer-left">
+                    <h2 class="contact-title">ПОДЕЛИТЕСЬ СВОЕЙ ИСТОРИЕЙ</h2>
+                    <div class="contact-text">
+                        <p>Знаете что-то интересное о событиях 1941-1945? напишите нам!<br>
+                        Мы постоянно находимся в процессе поиска информации о родственниках подводников.</p>
+                    </div>
+                    <div class="footer-buttons">
+                        <a href="contact.html" class="btn-white">написать нам</a>
+                        <a href="https://vk.ru/balticvaryag" target="_blank" style="display: inline-block; margin-left: 10px;">
+        <img src="vk.JPG" alt="VK" style="height: 44px; width: auto; display: block;">
+    </a>
+</div>
+                </div>
+                <div class="footer-right">
+                    <h2 class="contact-title">КОНТАКТЫ</h2>
+                    <p class="contact-text">Эл. почта: <a href="mailto:sd@balticvaryag.ru">sd@balticvaryag.ru</a></p>
+                    <p class="contact-text">Телефон: +7 921 967-70-91</p>
+                    <a href="404.html" class="policy-link">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- СКРИПТ ДЛЯ МЕНЮ -->
+    <script>
+        const menuOverlay = document.getElementById('menuOverlay');
+        const openBtn = document.getElementById('openMenu');
+        const closeBtn = document.getElementById('closeMenu');
+
+        openBtn.addEventListener('click', () => menuOverlay.classList.add('active'));
+        closeBtn.addEventListener('click', () => menuOverlay.classList.remove('active'));
+        
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) menuOverlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
